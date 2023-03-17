@@ -252,9 +252,9 @@ with DAG("Covid_Data_Analytics", start_date = datetime(2022, 1, 1),
 
     send_email_notification = EmailOperator(
         task_id="send_email_notification",
-        to="abhiteli001@gmail.com",
-        subject="forex_data_pipeline",
-        html_content="<h3>forex_data_pipeline</h3>"
+        to="youremail@example.com",
+        subject="Covid_Data_Analytics",
+        html_content="<h3>Covid_Data_Analytics</h3>"
     )
 
     send_slack_notification = SlackWebhookOperator(
