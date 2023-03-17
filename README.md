@@ -1,6 +1,6 @@
 # COVID-19-Data-Analytics-Data-Pipeline
 
-This is a Data Engineering project that involves building a data pipeline to process COVID-19 data and enable analytics. The pipeline is built using Apache Airflow as an orchestration tool, PySpark for data transformation, Hive as a data warehouse, and Power BI for data visualization.
+This project is aimed at building a data pipeline for Covid data analytics using various technologies such as Apache Airflow, HDFS, PySpark, Hive, Power BI, and Docker. The pipeline fetches Covid data from GitHub and stages it in HDFS Data Warehouse, which is then transformed using PySpark. The transformed data is loaded into Hive for analytics, and the results are visualized using Power BI. The entire process is executed in Docker containers, ensuring consistency and reliability in the pipeline.
 
 ## Project Overview
 
@@ -17,6 +17,8 @@ Load the transformed data into Hive: The transformed data will be loaded into Hi
 Visualize the data using Power BI: The transformed data will be visualized using Power BI, a powerful data visualization tool that will enable the project to create interactive dashboards and reports.
 
 Monitor and optimize the data pipeline: The data pipeline will be monitored and optimized using Apache Airflow, which will enable the project to track the progress of the pipeline and identify bottlenecks.
+
+The entire process is executed in Docker containers, which provide an isolated environment for running the pipeline. Docker ensures that the pipeline is consistent and reliable, regardless of the environment it is run in.
 
 ## Technologies Used
 The project uses the following technologies:
@@ -36,4 +38,4 @@ Enables the project to create interactive dashboards and reports for data visual
 Provides a scalable and reliable data pipeline that can be monitored and optimized for performance.
 
 ## Conclusion
-The COVID-19 Data Analytics Data Pipeline project is an essential tool for processing and analyzing COVID-19 data. The project provides a scalable, reliable, and efficient data pipeline that enables fast and accurate data processing, analytics, and visualization.
+In conclusion, this project showcases a complete data pipeline for Covid data analytics using various technologies such as Apache Airflow, HDFS, PySpark, Hive, Power BI, and Docker. The pipeline is designed to automate the entire process, from data ingestion to visualization, and can be easily extended to support other data sources and use cases.
