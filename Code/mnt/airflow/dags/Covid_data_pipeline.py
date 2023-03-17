@@ -250,9 +250,24 @@ with DAG("Covid_Data_Analytics", start_date = datetime(2022, 1, 1),
         verbose=False
     )
 
+    send_email_notification = EmailOperator(
+        task_id="send_email_notification",
+        to="abhiteli001@gmail.com",
+        subject="forex_data_pipeline",
+        html_content="<h3>forex_data_pipeline</h3>"
+    )
+
+    send_slack_notification = SlackWebhookOperator(
+        task_id="send_slack_notification",
+        http_conn_id="slack_conn",
+        message=_get_message(),
+        channel="#monitoring"
+    )
+
     check_cases_death_file_exists >> check_hospital_admissions_file_exists >> check_testing_file_exists
     check_testing_file_exists >> check_country_response_file_exists >> download_csv >> saving_files >> creating_cases_deaths_table 
     creating_cases_deaths_table >> transfor_load_cases_deaths_data >> creating_weekly_hospital_admissions_table
     creating_weekly_hospital_admissions_table >> creating_daily_hospital_admissions_table >> transform_load_hospital_data
     transform_load_hospital_data >> creating_testing_table >> transform_load_testing_data
     transform_load_testing_data >> creating_population_table >> transform_load_population_data
+    transform_load_population_data >> send_email_notification >> send_slack_notification
