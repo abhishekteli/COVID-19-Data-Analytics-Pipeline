@@ -45,3 +45,6 @@ Deploys the entire project on Docker for scalability and portability.
 ## Conclusion
 
 The COVID-19 Data Analytics Data Pipeline project is an essential tool for processing and analyzing COVID-19 data. The project provides a scalable, reliable, and efficient data pipeline that enables fast and accurate data processing, analytics, and visualization. Additionally, the project sends email notifications for success or failure and posts messages to a Slack channel for easy team communication and monitoring. The project is deployed on Docker to provide scalability and portability.
+
+<img width="1041" alt="Screenshot 2024-04-22 at 10 09 23 AM" src="https://github.com/abhishekteli/COVID-19-Data-Analytics-Pipeline/assets/26431142/d39f16ad-198e-4ac6-803a-47e8bcb3bcad">
+
